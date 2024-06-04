@@ -20,21 +20,17 @@ body {
   align-items: center;
 }
 
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .navbar h1 {
-  margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
   text-decoration: none;
-  display: inline-block;
-  margin-right: 20px;
-  border: 2px solid #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
+  color: #fff;
 }
 
 .navbar ul {
@@ -59,6 +55,10 @@ body {
 
 .navbar ul li a:hover {
   color: #ccc;
+}
+
+.navbar .hamburger {
+  display: none;
 }
 
 /* section  */
@@ -216,4 +216,56 @@ button:hover {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .logo {
+    margin-left: 5px;
+    gap: 5px;
+  }
+
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 3px 8px;
+  }
+
+  .hero-section {
+    height: 80vh;
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+  .portfolio-section .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .portfolio-section .portfolio-item img {
+    height: 200px;
+  }
 }

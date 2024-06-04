@@ -15,3 +15,8 @@ function submitForm(event) {
   document.getElementById("query").value = "";
   alert("Your query has been submitted successfully!");
 }
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
+}
